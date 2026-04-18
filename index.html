@@ -47,8 +47,8 @@
     <div class="answer" id="correctAnswer"></div>
 
     <div class="practice-buttons">
-        <button onclick="showAnswer()">Ver respuesta</button>
-        <button onclick="nextWord()">Siguiente</button>
+        <button onclick="showAnswer()" onmousedown="event.preventDefault()">Ver respuesta</button>
+        <button onclick="nextWord()" onmousedown="event.preventDefault()">Siguiente</button>
     </div>
 
     <button class="secondary" onclick="goBack()">
