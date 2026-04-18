@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+/* Pantallas */
+.screen {
+    display: none;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.screen.active {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* GRUPOS */
+.group {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 320px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.group-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Lista */
+.word-list {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.word-item {
+    font-size: 14px;
+    padding: 6px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.word-item:last-child {
+    border-bottom: none;
+}
+
+/* Botones */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #007bff;
+    color: white;
+}
+
+button.secondary {
+    background: #6c757d;
+}
+
+/* Práctica */
+.word-box {
+    font-size: 32px;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: bold;
+}
+
+/* INPUT GENERAL */
+input {
+    display: block;
+    width: 80%;
+    max-width: 320px;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+/* Respuesta */
+.answer {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 15px;
+    color: green;
+    min-height: 32px;
+}
+
+/* BOTONES PRÁCTICA */
+.practice-buttons {
+    margin-top: 45px;
+}
+
+/* ===================================================== */
+/* 🔥 EDITAR (MEJORADO) */
+/* ===================================================== */
+
+/* Selector */
+#folderSelect {
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 250px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* CONTENEDOR LISTA */
+#wordList {
+    margin-top: 10px;
+}
+
+/* FILA */
+.edit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 8px auto;
+    width: 90%;
+    max-width: 320px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* INPUTS EDITAR */
+.edit-row input {
+    display: inline-block;
+    width: 48%;
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* BOTONES EDITAR */
+.edit-buttons {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Separación botón guardar */
+.edit-buttons button:last-child {
+    margin-top: 25px;
+}
+
+/* 🔥 EXTRA IMPORTANTE (MEJORA CELULAR) */
+@media (max-width: 400px) {
+    .edit-row {
+        flex-direction: column;   /* se acomodan mejor en pantallas pequeñas */
+    }
+
+    .edit-row input {
+        width: 100%;
+    }
+}

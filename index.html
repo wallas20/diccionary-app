@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario Inglés</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- 🔥 (OPCIONAL PERO RECOMENDADO) PWA -->
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<!-- ===================== DICCIONARIO ===================== -->
+<div id="dictionaryScreen" class="screen active">
+    <h1>📘 Diccionario</h1>
+
+    <div id="groups"></div>
+
+    <button onclick="startPractice('all')">
+        Practicar todas las palabras
+    </button>
+
+    <!-- BOTÓN EDITAR -->
+    <button onclick="goToEdit()" id="btnEditarMain">
+        Editar
+    </button>
+</div>
+
+<!-- ===================== PRÁCTICA ===================== -->
+<div id="practiceScreen" class="screen">
+    <h1>🎯 Práctica</h1>
+
+    <div class="word-box" id="spanishWord"></div>
+
+    <input type="text" id="userAnswer" placeholder="Escribe en inglés">
+
+    <div class="answer" id="correctAnswer"></div>
+
+    <div class="practice-buttons">
+        <button onclick="showAnswer()">Ver respuesta</button>
+        <button onclick="nextWord()">Siguiente</button>
+    </div>
+
+    <button class="secondary" onclick="goBack()">
+        ⬅ Volver al diccionario
+    </button>
+</div>
+
+<!-- ===================== EDITAR ===================== -->
+<div id="editScreen" class="screen">
+    <h1>✏️ Editar palabras</h1>
+
+    <!-- SELECTOR -->
+    <select id="folderSelect"></select>
+
+    <!-- LISTA -->
+    <div id="wordList"></div>
+
+    <!-- BOTONES -->
+    <div class="edit-buttons">
+        <button onclick="activarEdicion()">Editar</button>
+        <button onclick="agregarPalabra()">Agregar</button>
+        <button onclick="guardarCambios()">Guardar</button>
+
+        <!-- 🔥 NUEVO -->
+        <button class="secondary" onclick="goBack()">Volver</button>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/index.js"></script>
+
+</body>
+</html>
