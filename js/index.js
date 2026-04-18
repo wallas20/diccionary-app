@@ -261,7 +261,6 @@ if (!localStorage.getItem("diccionario")) {
 }
 
 let dictionary = JSON.parse(localStorage.getItem("diccionario")) || defaultDictionary;
-localStorage.clear();
 
 function guardarEnLocal() {
     localStorage.setItem("diccionario", JSON.stringify(dictionary));
