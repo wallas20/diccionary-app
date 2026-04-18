@@ -329,10 +329,13 @@ function nextWord() {
     document.getElementById("spanishWord").textContent = currentWord.es;
     document.getElementById("userAnswer").value = "";
     document.getElementById("correctAnswer").textContent = "";
+
+    document.getElementById("userAnswer").focus();
 }
 
 function showAnswer() {
     document.getElementById("correctAnswer").textContent = currentWord.en;
+    document.getElementById("userAnswer").focus();
 }
 
 function goBack() {
