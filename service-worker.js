@@ -1,4 +1,4 @@
-const CACHE = "diccionario-v2";
+const CACHE = "diccionario-v1";
 
 self.addEventListener("install", e => {
   e.waitUntil(
