@@ -478,8 +478,8 @@ window.onload = function () {
 
     // 🔥 ACTIVAR SERVICE WORKER
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-            .then(() => console.log("Service Worker activo"))
-            .catch(err => console.log("Error:", err));
+    navigator.serviceWorker.register('./service-worker.js')
+        .then(() => console.log("SW activo"))
+        .catch(err => console.log("Error SW:", err));
     }
 };
